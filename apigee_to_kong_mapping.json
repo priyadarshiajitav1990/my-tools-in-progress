@@ -1,0 +1,12 @@
+{
+  "url": "url",
+  "host": "host",
+  "port": "port",
+  "scheme": "protocol",
+  "basePath": "path",
+  "timeout": "connect_timeout",
+  "retryCount": "retries",
+  "clientCert": "client_certificate",
+  "name": "name",
+  "tags": "tags"
+}

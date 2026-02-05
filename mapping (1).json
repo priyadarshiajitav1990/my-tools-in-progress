@@ -1,0 +1,17 @@
+{
+  "ProxyEndpoints": "services",
+  "TargetEndpoints": "targets",
+  "Policies": "plugins",
+  "Resources": "scripts",
+  "CORS": "cors",
+  "AssignMessage": "request_transformer",
+  "Javascript": "js_plugin",
+  "MessageLogging": "log_plugin",
+  "Quota": "rate_limiting",
+  "RaiseFault": "error_handling",
+  "ResponseCache": "proxy_cache",
+  "SpikeArrest": "rate_limiting",
+  "JSONThreatProtection": "request_validator",
+  "VerifyAPIKey": "key_auth",
+  "BasePaths": "routes"
+}

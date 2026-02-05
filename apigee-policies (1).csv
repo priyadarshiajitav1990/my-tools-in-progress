@@ -1,0 +1,58 @@
+Apigee Policy,Functionality,Kong Plugin Equivalent,Functionality,Mapping Status
+SpikeArrest,Throttle traffic spikes,Rate Limiting Advanced,Fine-grained rate limiting with burst control,Partial
+CORS,Configure CORS headers,CORS,Add CORS headers,Direct
+GraphQL,GraphQL validation & routing,GraphQL Rate Limiting / Custom,Kong has GraphQL plugins but limited,Partial
+HTTPModifier,Modify HTTP headers/params,Request Transformer,Transform request/response,Direct
+JSONtoXML,Transform JSON payloads to XML,Custom Plugin,No native Kong support,No Mapping
+OASValidation,Validate OpenAPI spec requests,Custom Plugin,Requires schema validation plugin,No Mapping
+PublishMessage,Publish message to queue/topic,Custom Plugin,Needs Kafka/queue integration,No Mapping
+RaiseFault,Generate custom error,Response Transformer,Modify error responses,Partial
+ReadPropertySet,Read property sets,Custom Plugin,No equivalent concept,No Mapping
+SOAPMessageValidation,Validate SOAP/XML messages,Custom Plugin,Kong lacks SOAP validation,No Mapping
+XMLtoJSON,Transform XML payloads to JSON,Custom Plugin,No native Kong support,No Mapping
+AccessControl,Restrict access by IPs,IP Restriction,Allow/deny by IP,Direct
+HMAC,Validate HMAC signatures,HMAC Auth Plugin,Validate HMAC signatures,Direct
+DecodeJWT,Decode JWT tokens,JWT,Decode and validate JWTs,Direct
+VerifyJWT,Validate JWT tokens,JWT,Validate JWTs,Direct
+VerifyIAM,Validate IAM tokens,Custom Plugin,Requires cloud IAM integration,No Mapping
+AssertCondition,Assert conditional logic,Custom Plugin,No equivalent in Kong,No Mapping
+ExternalCallout,Call external service,Custom Plugin,Requires custom plugin,No Mapping
+InvalidateCache,Invalidate cached entries,Custom Plugin,Kong cache invalidation limited,No Mapping
+LookupCache,Lookup cached entries,Proxy Cache,Cache lookup,Partial
+PopulateCache,Populate cache entries,Proxy Cache,Cache population,Partial
+ResponseCache,Cache API responses,Proxy Cache,Cache responses,Direct
+Quota,Enforce quotas,Rate Limiting,Limits per consumer/time window,Direct
+ResetQuota,Reset quota counters,Custom Plugin,Kong doesn’t support reset,No Mapping
+AccessEntity,Access entity data,Custom Plugin,No equivalent concept,No Mapping
+AssignMessage,Modify request/response,Request Transformer,Transform request/response,Direct
+ExtractVariables,Extract values for conditional logic,Custom Plugin,Needs Lua plugin,No Mapping
+KeyValueMapOperations,Store/retrieve key-value pairs,Custom Plugin,Needs DB/Redis integration,No Mapping
+MonetizationLimitsCheck,Check monetization limits,Custom Plugin,No equivalent concept,No Mapping
+ParseDialogflowRequest,Parse Dialogflow payload,Custom Plugin,Requires AI integration,No Mapping
+SetDialogflowResponse,Set Dialogflow response,Custom Plugin,Requires AI integration,No Mapping
+XSLTransform,Transform XML via XSLT,Custom Plugin,No native support,No Mapping
+BasicAuthentication,Validate username/password,Basic Auth,Enforce Basic Auth,Direct
+JSONThreatProtection,Protect against malicious JSON,Request Validator / Size Limiting,Validate JSON body size/structure,Partial
+DecodeJWS,Decode JWS tokens,Custom Plugin,Kong lacks JWS decode,No Mapping
+GenerateJWS,Generate JWS tokens,Custom Plugin,Kong doesn’t issue JWS,No Mapping
+VerifyJWS,Validate JWS tokens,Custom Plugin,Kong lacks JWS validation,No Mapping
+GenerateJWT,Generate JWT tokens,Custom Plugin,Kong validates but doesn’t issue,No Mapping
+DeleteOAuthv2Info,Delete OAuth token info,Custom Plugin,Kong doesn’t manage token store,No Mapping
+GetOAuthv2Info,Retrieve OAuth token info,Custom Plugin,Kong doesn’t manage token store,No Mapping
+OAuthv2,OAuth 2.0 flows,OAuth2,Implements OAuth2,Direct
+RevokeOAuthv2,Revoke OAuth tokens,Custom Plugin,Kong doesn’t manage token revocation,No Mapping
+SetOAuthv2Info,Set OAuth token info,Custom Plugin,Kong doesn’t manage token store,No Mapping
+RegularExpressionProtection,Regex attack protection,Custom Plugin,Needs custom validation,No Mapping
+SAMLAssertion,Validate SAML assertions,Custom Plugin,Kong lacks SAML support,No Mapping
+VerifyAPIKey,Validate API keys,Key Auth,Validate API keys,Direct
+XMLThreatProtection,Protect against malicious XML,Request Size Limiting,Restrict payload size,Partial
+DataCapture,Capture request/response data,HTTP Log / File Log,Log traffic data,Direct
+FlowCallout,Call external flow,Custom Plugin,No equivalent concept,No Mapping
+IntegrationCallout,Call integration service,Custom Plugin,Requires integration plugin,No Mapping
+JavaCallout,Execute Java code,Custom Plugin,Kong supports Lua/Go only,No Mapping
+JavaScript,Execute JS code,Custom Plugin,No JS runtime,No Mapping
+MessageLogging,Log request/response,File Log / HTTP Log,Logs to file/HTTP/TCP,Direct
+PythonScript,Execute Python code,Custom Plugin,No Python runtime,No Mapping
+ServiceCallout,Call backend service,Custom Plugin,Requires custom plugin,No Mapping
+SetIntegrationRequest,Set integration request,Custom Plugin,No equivalent concept,No Mapping
+TraceCapture,Capture trace data,Custom Plugin,Kong lacks tracing policy,No Mapping
