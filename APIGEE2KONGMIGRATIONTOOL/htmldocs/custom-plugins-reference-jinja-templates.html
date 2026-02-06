@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kong Custom Plugins Jinja Templates</title>
+  <link rel="stylesheet" href="custom-plugins-reference-style.css">
+</head>
+<body>
+  <h1>Kong Custom Plugins Jinja Templates</h1>
+  <div class="tabcontent active">
+    <h2>jspolicy</h2>
+    <pre><code>{% raw %}plugins:
+- name: jspolicy
+  config:
+    script_name: "{{ script_name }}"
+    dependency_name: "{{ dependency_name }}"
+    condition: "{{ condition }}"
+    flow: "{{ flow }}"
+    kv_pairs:
+{% for k, v in kv_pairs.items() %}      {{ k }}: {{ v }}
+{% endfor %}  tags:
+{% for tag in tags %}    - {{ tag }}
+{% endfor %}{% endraw %}</code></pre>
+    <h2>javascriptplugin</h2>
+    <pre><code>{% raw %}plugins:
+- name: javascriptplugin
+  config:
+{% for i in range(1, 11) %}    script_{{ i }}: "{{ scripts[i-1] }}"
+    condition_{{ i }}: "{{ conditions[i-1] }}"
+    phase_{{ i }}: "{{ phases[i-1] }}"
+{% endfor %}  tags:
+{% for tag in tags %}    - {{ tag }}
+{% endfor %}{% endraw %}</code></pre>
+    <h2>javapolicy</h2>
+    <pre><code>{% raw %}plugins:
+- name: javapolicy
+  config:
+    script_name: "{{ script_name }}"
+    dependency_name: "{{ dependency_name }}"
+    condition: "{{ condition }}"
+    flow: "{{ flow }}"
+    kv_pairs:
+{% for k, v in kv_pairs.items() %}      {{ k }}: {{ v }}
+{% endfor %}  tags:
+{% for tag in tags %}    - {{ tag }}
+{% endfor %}{% endraw %}</code></pre>
+    <h2>kong-plugin-jspolicy</h2>
+    <pre><code>{% raw %}plugins:
+- name: jspolicy
+  config:
+    script_name: "{{ script_name }}"
+    dependency_name: "{{ dependency_name }}"
+    condition: "{{ condition }}"
+    flow: "{{ flow }}"
+    kv_pairs:
+{% for k, v in kv_pairs.items() %}      {{ k }}: {{ v }}
+{% endfor %}  tags:
+{% for tag in tags %}    - {{ tag }}
+{% endfor %}{% endraw %}</code></pre>
+    <h2>luascriptfiles</h2>
+    <pre><code>{% raw %}plugins:
+- name: luascriptfiles
+  config:
+{% for i in range(1, 21) %}    script{{ i }}_name: "{{ scripts[i-1] }}"
+    script{{ i }}_condition: "{{ conditions[i-1] }}"
+    script{{ i }}_flow: "{{ flows[i-1] }}"
+{% endfor %}  tags:
+{% for tag in tags %}    - {{ tag }}
+{% endfor %}{% endraw %}</code></pre>
+    <h2>pypolicy</h2>
+    <pre><code>{% raw %}plugins:
+- name: pypolicy
+  config:
+    script_name: "{{ script_name }}"
+    dependency_name: "{{ dependency_name }}"
+    condition: "{{ condition }}"
+    flow: "{{ flow }}"
+    kv_pairs:
+{% for k, v in kv_pairs.items() %}      {{ k }}: {{ v }}
+{% endfor %}  tags:
+{% for tag in tags %}    - {{ tag }}
+{% endfor %}{% endraw %}</code></pre>
+    <h2>luafileexecuter</h2>
+    <pre><code>{% raw %}plugins:
+- name: luafileexecuter
+  config:
+    script_name: "{{ script_name }}"
+    dependency_name: "{{ dependency_name }}"
+    kv_pairs:
+{% for k, v in kv_pairs.items() %}      {{ k }}: {{ v }}
+{% endfor %}  tags:
+{% for tag in tags %}    - {{ tag }}
+{% endfor %}  ordering:
+    before:
+{% for b in ordering.before %}      - {{ b }}
+{% endfor %}    after:
+{% for a in ordering.after %}      - {{ a }}
+{% endfor %}  flow: "{{ flow }}"
+  condition: "{{ condition }}"
+{% endraw %}</code></pre>
+  </div>
+</body>
+</html>

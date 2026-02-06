@@ -1,0 +1,14 @@
+{# Jinja template for Kong rate-limiting-advanced plugin #}
+plugin:
+  name: rate-limiting-advanced
+  config:
+    limit:
+      second: {{ config.limit.second|default('null') }}
+      minute: {{ config.limit.minute|default('null') }}
+      hour: {{ config.limit.hour|default('null') }}
+      day: {{ config.limit.day|default('null') }}
+      month: {{ config.limit.month|default('null') }}
+      year: {{ config.limit.year|default('null') }}
+    window_size: {{ config.window_size|default(60) }}
+    sync_rate: {{ config.sync_rate|default(0) }}
+    strategy: {{ config.strategy|default('local') }}

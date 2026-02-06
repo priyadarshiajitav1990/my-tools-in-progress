@@ -1,0 +1,8 @@
+# Desired output for oauth2
+name: oauth2
+config:
+  scopes:
+    - read
+    - write
+  mandatory_scope: true
+  enable_client_credentials: true

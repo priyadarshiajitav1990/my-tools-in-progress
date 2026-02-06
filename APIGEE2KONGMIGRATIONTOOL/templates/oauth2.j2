@@ -1,0 +1,21 @@
+{#
+  Jinja template for Kong oauth2 plugin
+  Usage: Render with variables: name, config, service, route, consumer, enabled, protocols, tags
+  MANDATORY: name, config
+#}
+
+plugin:
+  name: {{ name }}
+  service: {{ service|default('') }}
+  route: {{ route|default('') }}
+  consumer: {{ consumer|default('') }}
+  enabled: {{ enabled|default(true) }}
+  protocols: [{% for proto in protocols %}"{{ proto }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  config:
+    scopes: [{% for s in config.scopes %}"{{ s }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+    mandatory_scope: {{ config.mandatory_scope|default(false) }}
+    enable_authorization_code: {{ config.enable_authorization_code|default(true) }}
+    enable_client_credentials: {{ config.enable_client_credentials|default(true) }}
+    enable_implicit_grant: {{ config.enable_implicit_grant|default(false) }}
+    enable_password_grant: {{ config.enable_password_grant|default(false) }}
+  tags: [{% for tag in tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}]

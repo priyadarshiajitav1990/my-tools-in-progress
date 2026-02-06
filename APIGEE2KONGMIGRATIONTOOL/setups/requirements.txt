@@ -1,0 +1,11 @@
+# Template rendering
+jinja2
+# YAML parsing
+pyyaml
+ruamel.yaml
+# XML parsing
+xmltodict
+# CLI utilities
+click
+# Deep merging
+deepmerge

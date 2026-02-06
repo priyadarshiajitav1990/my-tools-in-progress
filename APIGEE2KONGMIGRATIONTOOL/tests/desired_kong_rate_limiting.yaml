@@ -1,0 +1,6 @@
+# Desired output for rate-limiting
+name: rate-limiting
+config:
+  second: 5
+  minute: 100
+  policy: local

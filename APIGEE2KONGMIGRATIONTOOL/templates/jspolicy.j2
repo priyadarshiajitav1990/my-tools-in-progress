@@ -1,0 +1,8 @@
+
+name: jspolicy
+config:
+  script_name: "{{ script_name }}"
+  dependency_name: "{{ dependency_name }}"
+  condition: "{{ condition }}"
+  flow: "{{ flow }}"
+  kv_pairs: {{ kv_pairs if kv_pairs is mapping else '"' ~ kv_pairs ~ '"' }}

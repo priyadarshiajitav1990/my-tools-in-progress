@@ -1,0 +1,372 @@
+{
+  "AccessControl": [
+    { "plugin_name": "ip-restriction", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "AccessEntity": [
+    { "plugin_name": "acl", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "AssertCondition": [
+    { "plugin_name": "assertcondition", "api_flow": "both" },
+    { "plugin_name": "request-termination", "api_flow": "request" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "AssignMessage": [
+    { "plugin_name": "request-transformer", "api_flow": "request" },
+    { "plugin_name": "response-transformer", "api_flow": "response" },
+    { "plugin_name": "request-transformer-advanced", "api_flow": "request" },
+    { "plugin_name": "response-transformer-advanced", "api_flow": "response" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "Attribute": [
+    { "plugin_name": "attribute", "api_flow": "both" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "BasicAuthentication": [
+    { "plugin_name": "basic-auth", "api_flow": "request" },
+    { "plugin_name": "acl", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ConcurrentRateLimit": [
+    { "plugin_name": "rate-limiting-advanced", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "CORS": [
+    { "plugin_name": "cors", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "DataCapture": [
+    { "plugin_name": "datacapture", "api_flow": "both" },
+    { "plugin_name": "http-log", "api_flow": "both" },
+    { "plugin_name": "file-log", "api_flow": "both" },
+    { "plugin_name": "kafka-log", "api_flow": "both" },
+    { "plugin_name": "splunk-log", "api_flow": "both" },
+    { "plugin_name": "datadog", "api_flow": "both" },
+    { "plugin_name": "statsd", "api_flow": "both" },
+    { "plugin_name": "prometheus", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "DecodeJWS": [
+    { "plugin_name": "jwt", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "DecodeJWT": [
+    { "plugin_name": "jwt", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "DeleteOAuthV2Info": [
+    { "plugin_name": "oauth2", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ExtensionCallout": [
+    { "plugin_name": "extensioncallout", "api_flow": "both" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ExternalCallout": [
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ExtractVariables": [
+    { "plugin_name": "request-transformer", "api_flow": "request" },
+    { "plugin_name": "response-transformer", "api_flow": "response" },
+    { "plugin_name": "request-transformer-advanced", "api_flow": "request" },
+    { "plugin_name": "response-transformer-advanced", "api_flow": "response" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "FlowCallout": [
+    { "plugin_name": "flowcallout", "api_flow": "both" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "GenerateJWS": [
+    { "plugin_name": "oauth2", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "GenerateJWT": [
+    { "plugin_name": "oauth2", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "GetOAuthV2Info": [
+    { "plugin_name": "oauth2", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "GraphQL": [
+    { "plugin_name": "custom-graphql", "api_flow": "both" },
+    { "plugin_name": "graphql-rate-limiting-advanced", "api_flow": "request" },
+    { "plugin_name": "graphql-proxy-cache-advanced", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "HMAC": [
+    { "plugin_name": "hmac-auth", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "HTTPModifier": [
+    { "plugin_name": "request-transformer", "api_flow": "request" },
+    { "plugin_name": "response-transformer", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "IntegrationCallout": [
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "InvalidateCache": [
+    { "plugin_name": "invalidate-cache", "api_flow": "both" },
+    { "plugin_name": "proxy-cache-advanced", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "JavaCallout": [
+    { "plugin_name": "java-callout", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "JavaScript": [
+    { "plugin_name": "javascript", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "JSONThreatProtection": [
+    { "plugin_name": "request-validator", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "JSONToXML": [
+    { "plugin_name": "jsontoxml", "api_flow": "both" },
+    { "plugin_name": "request-transformer-advanced", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "JWT": [
+    { "plugin_name": "jwt", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "KeyValueMapOperations": [
+    { "plugin_name": "keyvaluemapoperations", "api_flow": "both" },
+    { "plugin_name": "vault-auth", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "LatencyAnalysis": [
+    { "plugin_name": "latencyanalysis", "api_flow": "both" },
+    { "plugin_name": "prometheus", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "LDAP": [
+    { "plugin_name": "ldap-auth", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "LookupCache": [
+    { "plugin_name": "proxy-cache-advanced", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "MessageLogging": [
+    { "plugin_name": "http-log", "api_flow": "both" },
+    { "plugin_name": "file-log", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "OAuthV2": [
+    { "plugin_name": "oauth2", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "OASValidation": [
+    { "plugin_name": "oas-validation", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ParseDialogflowRequest": [
+    { "plugin_name": "parsedialogflowrequest", "api_flow": "both" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "PopulateCache": [
+    { "plugin_name": "proxy-cache-advanced", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "PublishMessage": [
+    { "plugin_name": "publishmessage", "api_flow": "both" },
+    { "plugin_name": "kafka-log", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "PythonScript": [
+    { "plugin_name": "python", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "Quota": [
+    { "plugin_name": "rate-limiting-advanced", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "RaiseFault": [
+    { "plugin_name": "request-termination", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ReadPropertySet": [
+    { "plugin_name": "readpropertyset", "api_flow": "both" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "RegularExpressionProtection": [
+    { "plugin_name": "request-validator", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ResetQuota": [
+    { "plugin_name": "resetquota", "api_flow": "both" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ResponseCache": [
+    { "plugin_name": "proxy-cache-advanced", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "RevokeOAuthV2": [
+    { "plugin_name": "oauth2", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "SAMLAssertion": [
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "ServiceCallout": [
+    { "plugin_name": "servicecallout", "api_flow": "both" },
+    { "plugin_name": "request-callout", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "SetDialogflowResponse": [
+    { "plugin_name": "setdialogflowresponse", "api_flow": "both" },
+    { "plugin_name": "post-function", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "SetIntegrationRequest": [
+    { "plugin_name": "setintegrationrequest", "api_flow": "both" },
+    { "plugin_name": "pre-function", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "SetOAuthv2Info": [
+    { "plugin_name": "setoauthv2info", "api_flow": "both" },
+    { "plugin_name": "oauth2", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "SOAPMessageValidation": [
+    { "plugin_name": "soapvalidation", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "SpikeArrest": [
+    { "plugin_name": "rate-limiting", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "StatisticsCollector": [
+    { "plugin_name": "prometheus", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "SystemLog": [
+    { "plugin_name": "file-log", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "TraceCapture": [
+    { "plugin_name": "http-log", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "VerifyAPIKey": [
+    { "plugin_name": "key-auth", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "VerifyJWS": [
+    { "plugin_name": "jwt", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "VerifyJWT": [
+    { "plugin_name": "jwt", "api_flow": "request" },
+    { "plugin_name": "openid-connect", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "XMLThreatProtection": [
+    { "plugin_name": "request-validator", "api_flow": "request" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "XMLToJSON": [
+    { "plugin_name": "response-transformer-advanced", "api_flow": "response" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ],
+
+  "XSLTransform": [
+    { "plugin_name": "xsltransform", "api_flow": "both" },
+    { "plugin_name": "luascriptexecuter", "api_flow": "both" }
+  ]
+}

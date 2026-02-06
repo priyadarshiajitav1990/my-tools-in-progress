@@ -1,0 +1,8 @@
+# Desired output for jspolicy
+name: jspolicy
+config:
+  script_name: "main_policy.js"
+  dependency_name: "helper.js"
+  condition: ""
+  flow: "access"
+  kv_pairs: {}

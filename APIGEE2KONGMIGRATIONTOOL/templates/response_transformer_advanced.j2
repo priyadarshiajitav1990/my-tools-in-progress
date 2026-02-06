@@ -1,0 +1,10 @@
+{# Jinja template for Kong response_transformer_advanced plugin #}
+plugin:
+  name: response_transformer_advanced
+  config:
+    add:
+      headers: {{ config.add.headers|default([]) }}
+      body: {{ config.add.body|default([]) }}
+    remove:
+      headers: {{ config.remove.headers|default([]) }}
+      body: {{ config.remove.body|default([]) }}

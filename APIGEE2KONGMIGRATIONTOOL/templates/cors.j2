@@ -1,0 +1,21 @@
+{#
+  Jinja template for Kong cors plugin
+  Usage: Render with variables: name, config, service, route, consumer, enabled, protocols, tags
+  MANDATORY: name
+#}
+
+plugin:
+  name: {{ name }}
+  service: {{ service|default('') }}
+  route: {{ route|default('') }}
+  consumer: {{ consumer|default('') }}
+  enabled: {{ enabled|default(true) }}
+  protocols: [{% for proto in protocols %}"{{ proto }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  config:
+    origins: [{% for o in config.origins %}"{{ o }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+    methods: [{% for m in config.methods %}"{{ m }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+    headers: [{% for h in config.headers %}"{{ h }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+    exposed_headers: [{% for h in config.exposed_headers %}"{{ h }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+    credentials: {{ config.credentials|default(false) }}
+    max_age: {{ config.max_age|default(0) }}
+  tags: [{% for tag in tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}]

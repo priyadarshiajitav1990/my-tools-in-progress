@@ -1,0 +1,6 @@
+{# Jinja template for Kong acl plugin #}
+plugin:
+  name: acl
+  config:
+    allow: {{ config.allow|default([]) }}
+    deny: {{ config.deny|default([]) }}

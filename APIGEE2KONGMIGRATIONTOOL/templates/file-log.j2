@@ -1,0 +1,5 @@
+{# Jinja template for Kong file-log plugin #}
+plugin:
+  name: file-log
+  config:
+    path: {{ config.path|default('/tmp/kong.log') }}

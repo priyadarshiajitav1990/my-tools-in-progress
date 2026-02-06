@@ -1,0 +1,6 @@
+# Desired output for javascriptplugin
+name: javascriptplugin
+config:
+  script_1: "console.log(\"Hello from JS policy\")"
+  condition_1: ""
+  phase_1: "access"

@@ -1,0 +1,8 @@
+{# Jinja template for Kong ip-restriction plugin #}
+plugin:
+  name: ip-restriction
+  config:
+    allow: {{ config.allow|default([]) }}
+    deny: {{ config.deny|default([]) }}
+    status: {{ config.status|default(403) }}
+    message: {{ config.message|default('Forbidden') }}

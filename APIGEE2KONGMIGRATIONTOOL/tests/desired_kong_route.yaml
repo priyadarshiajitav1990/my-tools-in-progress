@@ -1,0 +1,5 @@
+# Desired output for route
+name: example-route
+paths:
+  - /example
+service: example-service

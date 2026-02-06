@@ -1,0 +1,6 @@
+{# Jinja template for Kong hmac_auth plugin #}
+plugin:
+  name: hmac_auth
+  config:
+    hide_credentials: {{ config.hide_credentials|default(false) }}
+    anonymous: {{ config.anonymous|default('') }}

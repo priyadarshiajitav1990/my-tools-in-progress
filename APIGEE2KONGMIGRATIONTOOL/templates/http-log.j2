@@ -1,0 +1,8 @@
+{# Jinja template for Kong http-log plugin #}
+plugin:
+  name: http-log
+  config:
+    http_endpoint: {{ config.http_endpoint|default('') }}
+    method: {{ config.method|default('POST') }}
+    timeout: {{ config.timeout|default(10000) }}
+    keepalive: {{ config.keepalive|default(60000) }}

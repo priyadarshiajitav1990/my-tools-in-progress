@@ -1,0 +1,10 @@
+{# Jinja template for Kong ldap_auth plugin #}
+plugin:
+  name: ldap_auth
+  config:
+    ldap_host: {{ config.ldap_host|default('') }}
+    ldap_port: {{ config.ldap_port|default(389) }}
+    start_tls: {{ config.start_tls|default(false) }}
+    base_dn: {{ config.base_dn|default('') }}
+    attribute: {{ config.attribute|default('uid') }}
+    cache_ttl: {{ config.cache_ttl|default(60) }}

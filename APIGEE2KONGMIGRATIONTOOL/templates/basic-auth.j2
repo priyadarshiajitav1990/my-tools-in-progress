@@ -1,0 +1,6 @@
+{# Jinja template for Kong basic-auth plugin #}
+plugin:
+  name: basic-auth
+  config:
+    hide_credentials: {{ config.hide_credentials|default(false) }}
+    anonymous: {{ config.anonymous|default('') }}

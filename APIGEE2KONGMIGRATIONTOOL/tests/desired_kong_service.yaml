@@ -1,0 +1,3 @@
+# Desired output for service
+name: example-service
+url: http://example.com

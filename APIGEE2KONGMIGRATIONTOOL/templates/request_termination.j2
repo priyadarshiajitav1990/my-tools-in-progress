@@ -1,0 +1,6 @@
+{# Jinja template for Kong request_termination plugin #}
+plugin:
+  name: request_termination
+  config:
+    status_code: {{ config.status_code|default(403) }}
+    message: {{ config.message|default('Terminated by policy') }}

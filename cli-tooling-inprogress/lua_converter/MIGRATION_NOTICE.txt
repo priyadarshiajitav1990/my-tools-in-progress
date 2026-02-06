@@ -1,0 +1,3 @@
+The CLI tool has been unified as 'lua_converter'.
+Use 'lua_converter.sh' for Java, JS, and JAR conversions.
+Legacy 'java2lua_cli' is deprecated and will be removed in future releases.

@@ -1,0 +1,54 @@
+{
+  "input_dir": "../inputs",
+  "output_dir": "../outputs",
+  "apigee": {
+    "type": "opdk",
+    "version": "",
+    "admin_api": {
+      "url": "https://apigee-admin.example.com/v1",
+      "security": {
+        "enabled": true,
+        "auth_type": "basic",
+        "username": "",
+        "password": "",
+        "token": "",
+        "api_key": ""
+      }
+    }
+  },
+  "kong": {
+    "type": "onprem",
+    "version": "",
+    "admin_api": {
+      "url": "https://kong-admin.example.com",
+      "security": {
+        "enabled": true,
+        "auth_type": "basic",
+        "username": "",
+        "password": "",
+        "token": "",
+        "api_key": ""
+      }
+    },
+    "konnect": {
+      "enabled": false,
+      "url": "https://cloud.konghq.com",
+      "security": {
+        "enabled": false,
+        "auth_type": "apikey",
+        "api_key": ""
+      }
+    }
+  },
+  "mappers": {
+    "policy2plugin": "../mappers/policy2plugin.json"
+  },
+  "logs": {
+    "log_dir": "../logs",
+    "log_level": "INFO"
+  },
+  "other": {
+    "temp_dir": "../temp",
+    "max_threads": 4
+  }
+}

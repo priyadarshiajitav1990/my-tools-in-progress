@@ -1,0 +1,12 @@
+
+route:
+  name: "route.{{ name }}"
+  service: "{{ service }}"
+  paths: [{% for p in paths %}"{{ p }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  methods: [{% for m in methods %}"{{ m }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  strip_path: {{ strip_path|default(true) }}
+  preserve_host: {{ preserve_host|default(false) }}
+  protocols: [{% for proto in protocols %}"{{ proto }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  hosts: [{% for h in hosts %}"{{ h }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  regex_priority: {{ regex_priority|default(0) }}
+  tags: [{% for tag in tags %}"{{ tag }}"{% if not loop.last %}, {% endif %}{% endfor %}]

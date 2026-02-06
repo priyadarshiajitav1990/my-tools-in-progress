@@ -1,0 +1,27 @@
+# Desired output for verified output
+services:
+  - name: example-service
+    url: http://example.com
+routes:
+  - name: example-route
+    paths:
+      - /example
+    service: example-service
+plugins:
+  - name: rate-limiting
+    config:
+      second: 5
+      minute: 100
+      policy: local
+  - name: oauth2
+    config:
+      scopes:
+        - read
+        - write
+      mandatory_scope: true
+      enable_client_credentials: true
+  - name: key-auth
+    config:
+      key_names:
+        - apikey
+      hide_credentials: false

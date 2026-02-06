@@ -1,0 +1,1 @@
+This CLI tool is deprecated. Please use 'lua_converter' in place of 'java2lua_cli'. All future updates and support will be provided for 'lua_converter' only.

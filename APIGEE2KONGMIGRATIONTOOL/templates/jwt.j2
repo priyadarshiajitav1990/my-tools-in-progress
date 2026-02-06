@@ -1,0 +1,7 @@
+{# Jinja template for Kong jwt plugin #}
+plugin:
+  name: jwt
+  config:
+    key_claim_name: {{ config.key_claim_name|default('iss') }}
+    secret_is_base64: {{ config.secret_is_base64|default(false) }}
+    run_on_preflight: {{ config.run_on_preflight|default(true) }}

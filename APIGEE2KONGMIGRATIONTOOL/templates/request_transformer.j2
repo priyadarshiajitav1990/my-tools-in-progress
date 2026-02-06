@@ -1,0 +1,12 @@
+{# Jinja template for Kong request_transformer plugin #}
+plugin:
+  name: request_transformer
+  config:
+    add:
+      headers: {{ config.add.headers|default([]) }}
+      querystring: {{ config.add.querystring|default([]) }}
+      body: {{ config.add.body|default([]) }}
+    remove:
+      headers: {{ config.remove.headers|default([]) }}
+      querystring: {{ config.remove.querystring|default([]) }}
+      body: {{ config.remove.body|default([]) }}

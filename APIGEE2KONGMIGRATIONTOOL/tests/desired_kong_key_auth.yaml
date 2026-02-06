@@ -1,0 +1,6 @@
+# Desired output for key-auth
+name: key-auth
+config:
+  key_names:
+    - apikey
+  hide_credentials: false

@@ -1,0 +1,22 @@
+{#
+  Jinja template for Kong rate-limiting plugin
+  Usage: Render with variables: name, config, service, route, consumer, enabled, protocols, tags
+  MANDATORY: name, config
+#}
+
+plugin:
+  name: {{ name }}
+  service: {{ service|default('') }}
+  route: {{ route|default('') }}
+  consumer: {{ consumer|default('') }}
+  enabled: {{ enabled|default(true) }}
+  protocols: [{% for proto in protocols %}"{{ proto }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  config:
+    second: {{ config.second|default('null') }}
+    minute: {{ config.minute|default('null') }}
+    hour: {{ config.hour|default('null') }}
+    day: {{ config.day|default('null') }}
+    month: {{ config.month|default('null') }}
+    year: {{ config.year|default('null') }}
+    policy: {{ config.policy|default('local') }}
+  tags: [{% for tag in tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}]

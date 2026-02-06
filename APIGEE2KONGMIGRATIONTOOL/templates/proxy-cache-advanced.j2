@@ -1,0 +1,7 @@
+{# Jinja template for Kong proxy-cache-advanced plugin #}
+plugin:
+  name: proxy-cache-advanced
+  config:
+    response_code: {{ config.response_code|default(200) }}
+    request_method: {{ config.request_method|default('GET') }}
+    content_type: {{ config.content_type|default('application/json') }}

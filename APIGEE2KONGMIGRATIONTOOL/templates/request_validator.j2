@@ -1,0 +1,7 @@
+{# Jinja template for Kong request_validator plugin #}
+plugin:
+  name: request_validator
+  config:
+    parameter_schema: {{ config.parameter_schema|default('{}') }}
+    body_schema: {{ config.body_schema|default('{}') }}
+    verbose_response: {{ config.verbose_response|default(false) }}

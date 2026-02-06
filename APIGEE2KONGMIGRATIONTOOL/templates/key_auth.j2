@@ -1,0 +1,17 @@
+{#
+  Jinja template for Kong key_auth plugin
+  Usage: Render with variables: name, config, service, route, consumer, enabled, protocols, tags
+  MANDATORY: name
+#}
+
+plugin:
+  name: {{ name }}
+  service: {{ service|default('') }}
+  route: {{ route|default('') }}
+  consumer: {{ consumer|default('') }}
+  enabled: {{ enabled|default(true) }}
+  protocols: [{% for proto in protocols %}"{{ proto }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  config:
+    key_names: [{% for k in config.key_names %}"{{ k }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+    hide_credentials: {{ config.hide_credentials|default(false) }}
+  tags: [{% for tag in tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}]
